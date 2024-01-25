@@ -20,11 +20,27 @@
 // }
 // document.write("El helado mas caro es " + heladoMasCaro);
 
-monto = prompt("cuanta plata hay");
-const precioVoleto = 10;
-document.write(
-  "puedes comprar " +
-    parseInt(monto / precioVoleto) +
-    "y te sobra " +
-    (monto % precioVoleto)
-);
+// monto = prompt("cuanta plata hay");
+// const precioVoleto = 10;
+// document.write(
+//   "puedes comprar " +
+//     parseInt(monto / precioVoleto) +
+//     "y te sobra " +
+//     (monto % precioVoleto)
+// );
+
+let primerInvitado = false;
+const validarEntrada = (hora) => {
+  let edad = prompt("cuantos años tienes");
+  if (edad >= 18) {
+    if (hora == 2 && primerInvitado == false) {
+      document.write("puedes entrar gratis");
+      primerInvitado = true;
+    } else {
+      document.write("puedes entar pero tienes que pagar");
+    }
+  } else {
+    document.write("No puedes pasar");
+  }
+};
+validarEntrada(2);
